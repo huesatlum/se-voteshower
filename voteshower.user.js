@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Vote shower
-// @version      0.1
+// @version      1.0.0
 // @description  View vote counts on all Stack Exchange sites
 // @author       NinjaBearMonkey
 // @grant        none
@@ -13,8 +13,10 @@
 // @match       *://*.superuser.com/*
 // ==/UserScript==
 
-if($) {
-$('.vote-count-post')
+/* global $ */
+
+if(window.$) {
+$('.js-vote-count')
   .attr('title', 'View upvote and downvote totals')
   .css('cursor', 'pointer')
   .click(function(){
